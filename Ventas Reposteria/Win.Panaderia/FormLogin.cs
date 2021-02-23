@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.Rentas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace Win.Panaderia
 {
     public partial class FormLogin : Form
     {
+        SeguridadBL _seguridad;
+
         public FormLogin()
         {
             InitializeComponent();
+
+            _seguridad = new SeguridadBL();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -48,8 +53,10 @@ namespace Win.Panaderia
             usuario = textBox1.Text;
             contrasena = textBox2.Text;
 
+            var resultado = _seguridad.Autorizar(usuario, contrasena);
 
-            if (usuario == "admin" && contrasena == "123")
+
+            if (resultado == true)
             {
                 this.Close();
             }

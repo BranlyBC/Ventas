@@ -148,6 +148,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\BL.Rentas.Producto.datasource" />
+    <None Include="Properties\DataSources\BL.Rentas.ProductosBL.datasource" />
+    <None Include="Properties\DataSources\BL.Rentas.SeguridadBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -160,6 +163,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL.Rentas\BL.Rentas.csproj">
+      <Project>{09fd05fb-c8bb-479e-9be9-9907ce175c58}</Project>
+      <Name>BL.Rentas</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
