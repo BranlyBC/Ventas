@@ -58,6 +58,7 @@ namespace Win.Panaderia
             formClientes.Show();
 
 
+
         }
 
         private void registroDeProveedorToolStripMenuItem_Click(object sender, EventArgs e)
