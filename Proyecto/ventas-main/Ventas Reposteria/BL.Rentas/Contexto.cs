@@ -9,6 +9,7 @@ namespace BL.Rentas
         public Contexto() : base("VideoJuegos")
         {
 
+
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
