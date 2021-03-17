@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ventas", "Ventas\Ventas.csproj", "{8FC6F152-E684-46C0-A156-F311503A256F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ventas", "Ventas\Ventas.csproj", "{7E829A56-43E2-48BF-B6AD-763A606CC16D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL.Rentas", "..\ventas-main\Ventas Reposteria\BL.Rentas\BL.Rentas.csproj", "{09FD05FB-C8BB-479E-9BE9-9907CE175C58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win.Panaderia", "..\ventas-main\Ventas Reposteria\Win.Panaderia\Win.Panaderia.csproj", "{D854093B-AC9D-4AEF-94EF-35504E97B50F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8FC6F152-E684-46C0-A156-F311503A256F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8FC6F152-E684-46C0-A156-F311503A256F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8FC6F152-E684-46C0-A156-F311503A256F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8FC6F152-E684-46C0-A156-F311503A256F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E829A56-43E2-48BF-B6AD-763A606CC16D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E829A56-43E2-48BF-B6AD-763A606CC16D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E829A56-43E2-48BF-B6AD-763A606CC16D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E829A56-43E2-48BF-B6AD-763A606CC16D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09FD05FB-C8BB-479E-9BE9-9907CE175C58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09FD05FB-C8BB-479E-9BE9-9907CE175C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09FD05FB-C8BB-479E-9BE9-9907CE175C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09FD05FB-C8BB-479E-9BE9-9907CE175C58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D854093B-AC9D-4AEF-94EF-35504E97B50F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D854093B-AC9D-4AEF-94EF-35504E97B50F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D854093B-AC9D-4AEF-94EF-35504E97B50F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D854093B-AC9D-4AEF-94EF-35504E97B50F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

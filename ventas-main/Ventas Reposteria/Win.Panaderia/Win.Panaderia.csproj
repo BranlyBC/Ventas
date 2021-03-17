@@ -164,7 +164,6 @@
     <None Include="Properties\DataSources\BL.Rentas.Producto.datasource" />
     <None Include="Properties\DataSources\BL.Rentas.ProductosBL.datasource" />
     <None Include="Properties\DataSources\BL.Rentas.SeguridadBL.datasource" />
-    <None Include="Properties\DataSources\BL.Rentas.TiposBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

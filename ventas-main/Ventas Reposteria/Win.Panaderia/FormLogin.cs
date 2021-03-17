@@ -56,7 +56,7 @@ namespace Win.Panaderia
             var resultado = _seguridad.Autorizar(usuario, contrasena);
 
 
-            if (resultado.Exitoso == true)
+            if (resultado == true)
             {
                 this.Close();
             }
