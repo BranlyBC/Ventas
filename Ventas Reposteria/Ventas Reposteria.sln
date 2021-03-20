@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win.Panaderia", "Win.Panade
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL.Rentas", "BL.Rentas\BL.Rentas.csproj", "{09FD05FB-C8BB-479E-9BE9-9907CE175C58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ventas", "..\..\Ventas\Ventas\Ventas.csproj", "{7E829A56-43E2-48BF-B6AD-763A606CC16D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{09FD05FB-C8BB-479E-9BE9-9907CE175C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09FD05FB-C8BB-479E-9BE9-9907CE175C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09FD05FB-C8BB-479E-9BE9-9907CE175C58}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7E829A56-43E2-48BF-B6AD-763A606CC16D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E829A56-43E2-48BF-B6AD-763A606CC16D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E829A56-43E2-48BF-B6AD-763A606CC16D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E829A56-43E2-48BF-B6AD-763A606CC16D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -170,7 +170,6 @@ namespace Win.Panaderia
             {
                 listaProductosBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
-                MessageBox.Show("Producto Guardado");
             }
             else
             {

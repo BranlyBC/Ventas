@@ -33,9 +33,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(89, 116);
+            this.button1.Location = new System.Drawing.Point(78, 111);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(149, 84);
             this.button1.TabIndex = 0;
             this.button1.Text = "Procesar";
             this.button1.UseVisualStyleBackColor = true;
@@ -43,9 +43,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(282, 253);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
