@@ -232,5 +232,19 @@ namespace Win.Panaderia
             DeshabilitarHabilitarBotones(true);
             Eliminar(0);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            var archivo = openFileDialog1.FileName;
+
+            if (archivo != "")
+            {
+                var fileInfo = new FileInfo(archivo);
+                var fileStream = fileInfo.OpenRead();
+
+                fotoPictureBox.Image = Image.FromStream(fileStream);
+            }
+        }
     }
 }

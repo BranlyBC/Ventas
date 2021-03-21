@@ -95,7 +95,7 @@ namespace BL.Rentas
         public string Descripcion { get; set; }
         public double Precio { get; set; }
         public int Existencia { get; set; }
-        public byte[] Foto { get; set; }
+        byte[] foto { get; set; }
         public bool Activo { get; set; }
     }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
@@ -71,7 +72,7 @@ namespace BL.Rentas
         public int Id { get; set; }
         public DateTime Fecha { get; set; }
         public int ClienteId { get; set; }
-        public Cliente Cliente { get; set; }
+        public cliente Cliente { get; set; }
         public BindingList<FacturaDetalle> FacturaDetalle { get; set; }
         public double Subtotal { get; set; }
         public double Impuesto { get; set; }

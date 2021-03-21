@@ -5,6 +5,8 @@ namespace BL.Rentas
 {
     public class Contexto : DbContext
     {
+        internal readonly object Facturas;
+
         public Contexto():base("VideoJuegos")
         {
 
