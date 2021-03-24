@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static BL.Rentas.FacturaBL;
 
 namespace Win.Panaderia
 {
@@ -121,6 +122,14 @@ namespace Win.Panaderia
         private void facturaDetalleDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.ThrowException = false;
+        }
+
+        private void facturaDetalleDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            var factura = (Factura)listaFacturasBindingSource.Current;
+            _facturaBL.CalcularFactura(factura);
+
+            listaFacturasBindingSource.ResetBindings(false);
         }
     }
 }

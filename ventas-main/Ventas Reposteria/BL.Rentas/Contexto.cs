@@ -5,6 +5,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static BL.Rentas.FacturaBL;
 
 namespace BL.Rentas
 {

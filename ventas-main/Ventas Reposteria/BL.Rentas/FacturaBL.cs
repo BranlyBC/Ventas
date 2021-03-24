@@ -41,15 +41,14 @@ namespace BL.Rentas
                 factura.FacturaDetalle.Add(nuevoDetalle);
             }
         }
-        
+
         public void RemoverFacturaDetalle(Factura factura, FacturaDetalle facturaDetalle)
         {
             if (factura != null && facturaDetalle != null)
-           {
+            {
                 factura.FacturaDetalle.Remove(facturaDetalle);
             }
         }
-    
 
         public void CancelarCambios()
         {
@@ -74,6 +73,7 @@ namespace BL.Rentas
             return resultado;
         }
 
+
         private Resultado Validar(Factura factura)
         {
             var resultado = new Resultado();
@@ -81,7 +81,35 @@ namespace BL.Rentas
 
             return resultado;
         }
+
+
+
+
+        public void CalcularFactura(Factura factura)
+        {
+            if (factura != null)
+            {
+                double subtotal = 0;
+
+                foreach (var detalle in factura.FacturaDetalle)
+                {
+                    var producto = _contexto.Productos.Find(detalle.ProductoId);
+                    if (producto != null)
+                    {
+                        detalle.Precio = producto.Precio;
+                        detalle.Total = detalle.Cantidad * producto.Precio;
+
+                        subtotal += detalle.Total;
+                    }
+                }
+
+                factura.Subtotal = subtotal;
+                factura.Impuesto = subtotal * 0.15;
+                factura.Total = subtotal + factura.Impuesto;
+            }
+        }
     }
+
 
     public class Factura
     {
@@ -105,7 +133,6 @@ namespace BL.Rentas
 
     public class FacturaDetalle
     {
-        
         public int Id { get; set; }
         public int ProductoId { get; set; }
         public Producto Producto { get; set; }
@@ -119,6 +146,3 @@ namespace BL.Rentas
         }
     }
 }
-
-
-  

@@ -382,6 +382,7 @@
             this.facturaDetalleDataGridView.Size = new System.Drawing.Size(753, 267);
             this.facturaDetalleDataGridView.TabIndex = 16;
             this.facturaDetalleDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.facturaDetalleDataGridView_CellContentClick);
+            this.facturaDetalleDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.facturaDetalleDataGridView_CellEndEdit);
             this.facturaDetalleDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.facturaDetalleDataGridView_DataError);
             // 
             // button1
