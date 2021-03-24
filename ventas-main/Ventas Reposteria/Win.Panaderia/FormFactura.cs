@@ -131,6 +131,11 @@ namespace Win.Panaderia
 
             listaFacturasBindingSource.ResetBindings(false);
         }
+
+        private void idTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
