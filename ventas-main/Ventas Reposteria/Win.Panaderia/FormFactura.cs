@@ -136,6 +136,34 @@ namespace Win.Panaderia
         {
 
         }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            if (idTextBox.Text != "")
+            {
+                var resultado = MessageBox.Show("Desea anular esta factura?", "Anular", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    var id = Convert.ToInt32(idTextBox.Text);
+                    Anular(id);
+                }
+            }
+
+        }
+
+        private void Anular(int id)
+        {
+            var resultado = _facturaBL.AnularFactura(id);
+
+            if (resultado == true)
+            {
+                listaFacturasBindingSource.ResetBindings(false);
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error al anular la factura");
+            }
+        }
     }
 }
 

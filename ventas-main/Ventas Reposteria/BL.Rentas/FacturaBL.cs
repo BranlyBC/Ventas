@@ -149,7 +149,23 @@ namespace BL.Rentas
                 factura.Total = subtotal + factura.Impuesto;
             }
         }
+
+        public bool AnularFactura(int id)
+        {
+            foreach (var factura in ListaFacturas)
+            {
+                if (factura.Id == id)
+                {
+                    factura.Activo = false;
+                    _contexto.SaveChanges();
+                    return true;
+                }
+            }
+            return false;
+        }
     }
+
+
 
 
     public class Factura
