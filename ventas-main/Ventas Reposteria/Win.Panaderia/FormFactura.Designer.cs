@@ -192,6 +192,7 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -276,6 +277,7 @@
             this.listaFacturasBindingNavigatorSaveItem.Name = "listaFacturasBindingNavigatorSaveItem";
             this.listaFacturasBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.listaFacturasBindingNavigatorSaveItem.Text = "Guardar datos";
+            this.listaFacturasBindingNavigatorSaveItem.Click += new System.EventHandler(this.listaFacturasBindingNavigatorSaveItem_Click);
             // 
             // activoCheckBox
             // 
@@ -415,6 +417,7 @@
             this.toolStripButtonCancelar.Size = new System.Drawing.Size(70, 24);
             this.toolStripButtonCancelar.Text = "Cancelar";
             this.toolStripButtonCancelar.Visible = false;
+            this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
             // 
             // FormFactura
             // 
