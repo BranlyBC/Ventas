@@ -112,5 +112,18 @@ namespace Win.Panaderia
         {
             login();
         }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formFactura = new FormFactura();
+            formFactura.MdiParent = this;
+            formFactura.Show();
+
+        }
     }
 }

@@ -53,8 +53,11 @@ namespace Win.Panaderia
             usuario = textBox1.Text;
             contrasena = textBox2.Text;
 
-            var resultado = _seguridad.Autorizar(usuario, contrasena);
+            button1.Enabled = false;
+            button1.Text = " Verificando ... ";
+            Application.DoEvents();
 
+            var resultado = _seguridad.Autorizar(usuario, contrasena);
 
             if (resultado == true)
             {
@@ -62,9 +65,11 @@ namespace Win.Panaderia
             }
             else
             {
-                MessageBox.Show("Usuario o Contraseña Incorrecta");
-
+                MessageBox.Show(" Usuario o contraseña incorrecta ");
             }
+
+            button1.Enabled = true;
+            button1.Text = " Aceptar ";
         }
     }
 }

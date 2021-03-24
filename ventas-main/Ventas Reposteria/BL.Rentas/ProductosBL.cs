@@ -28,6 +28,15 @@ namespace BL.Rentas
             return ListaProductos;
         }
 
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
+
         public Resultado GuardarProducto(Producto producto)
         {
             var resultado = Validar(producto);
@@ -68,6 +77,14 @@ namespace BL.Rentas
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
+            if (producto == null)
+            {
+                resultado.Mensaje = " Agregue un producto valido ";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
+
             if (string.IsNullOrEmpty(producto.Descripcion) == true)
             {
                 resultado.Mensaje = "Ingrese una descripcion";
@@ -88,10 +105,16 @@ namespace BL.Rentas
 
             if (producto.TipoId == 0)
             {
-                resultado.Mensaje = "Seleccione un Tipo";
+                resultado.Mensaje = " Seleccione un Tipo ";
                 resultado.Exitoso = false;
             }
-       
+
+            if (producto.CategoriaId == 0)
+            {
+                resultado.Mensaje = " Seleccione una categoria ";
+                resultado.Exitoso = false;
+            }
+
             return resultado;
         }
     }
@@ -104,17 +127,15 @@ namespace BL.Rentas
         public int Existencia { get; set; }
         public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
-        public int TipoId { get; set; }
+        public int TipoId  { get; set; }
         public Tipo Tipo { get; set; }
         public byte[] Foto { get; set; }
         public bool Activo { get; set; }
-        public string usuarios { get; set; }
-    }
 
-    public class Resultado
-    {
-       public bool Exitoso { get; set; }
-       public string Mensaje { get; set; }
+
+        public Producto()
+        {
+            Activo = true;
+        }
     }
 }
-

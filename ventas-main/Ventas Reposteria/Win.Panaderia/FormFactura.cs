@@ -8,18 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ventas
+namespace Win.Panaderia
 {
-    public partial class Form1 : Form
+    public partial class FormFactura : Form
     {
-        public Form1()
+        public FormFactura()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void FormFactura_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Piensa, cree, sueña y atrevete");
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

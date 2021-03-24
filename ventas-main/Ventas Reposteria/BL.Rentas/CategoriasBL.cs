@@ -1,5 +1,4 @@
-﻿using BL.Rentas;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.Entity;
@@ -17,24 +16,22 @@ namespace BL.Rentas
 
         public CategoriasBL()
         {
-            _contexto = new Contexto();
+            _contexto = new  Contexto();
             ListaCategorias = new BindingList<Categoria>();
-
         }
 
-
         public BindingList<Categoria> ObtenerCategorias()
-
         {
             _contexto.Categorias.Load();
             ListaCategorias = _contexto.Categorias.Local.ToBindingList();
+
             return ListaCategorias;
         }
-
     }
+
     public class Categoria
     {
-        public int Id { get; set; }
-        public string Descripcion { get; set; }
+       public int Id { get; set; }
+       public string  Descripcion { get ; set ; }
     }
 }
