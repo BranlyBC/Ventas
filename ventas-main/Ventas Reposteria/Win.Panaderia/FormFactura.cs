@@ -15,7 +15,7 @@ namespace Win.Panaderia
     {
         FacturaBL _facturaBL;
         ClientesBL _clientesBL;
-        ProductosBL _productoBL;
+        ProductosBL _productosBL;
 
 
         public FormFactura()
@@ -28,7 +28,7 @@ namespace Win.Panaderia
             _clientesBL = new ClientesBL();
             listaClientesBindingSource.DataSource = _clientesBL.ObtenerClientes();
 
-            _productoBL = new ProductosBL();
+            _productosBL = new ProductosBL();
             listaProductosBindingSource.DataSource = _productosBL.ObtenerProductos();
         }
 
@@ -79,9 +79,9 @@ namespace Win.Panaderia
                 DeshabilitarHabilitarBotones(true);
                 MessageBox.Show("Factura Guardada Exitosamente");
 
-                {
-                    else
-                }
+            }
+            else
+            {
                 MessageBox.Show(resultado.Mensaje);
 
             }
@@ -92,6 +92,30 @@ namespace Win.Panaderia
         {
             DeshabilitarHabilitarBotones(true);
             _facturaBL.CancelarCambios();
+        }
+
+        private void facturaDetalleDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var factura = (Factura)listaFacturasBindingSource.Current;
+            _facturaBL.AgregarFacturaDetalle(factura);
+
+            DeshabilitarHabilitarBotones(false);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var factura = (Factura)listaFacturasBindingSource.Current;
+            var facturaDetalle = (FacturaDetalle)facturaDetalleBindingSource.Current;
+
+            _facturaBL.RemoverFacturaDetalle(factura, facturaDetalle);
+
+            DeshabilitarHabilitarBotones(false);
         }
     }
 }
