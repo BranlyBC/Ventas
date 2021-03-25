@@ -164,6 +164,20 @@ namespace Win.Panaderia
                 MessageBox.Show("Ocurrio un error al anular la factura");
             }
         }
+
+        private void listaFacturasBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            var factura = (Factura)listaFacturasBindingSource.Current;
+
+            if (factura != null && factura.Id != 0 && factura.Activo == false)
+            {
+                label1.Visible = true;
+            }
+            else
+            {
+                label1.Visible = false;
+            }
+        }
     }
 }
 
