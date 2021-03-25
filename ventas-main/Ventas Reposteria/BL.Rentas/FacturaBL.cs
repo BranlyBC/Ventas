@@ -108,11 +108,11 @@ namespace BL.Rentas
                 return resultado;
             }
 
-           // if (factura.Id != 0 && factura.Activo == true)
-           // {
-           //     resultado.Mensaje = "La factura ya fue emitida y no se pueden realizar cambios en ella";
-            //    resultado.Exitoso = false;
-          //  }
+           if (factura.Id != 0 && factura.Activo == true)
+            {
+                resultado.Mensaje = "La factura ya fue fue emitida y  no se pueden realizar cambios en ella";
+                resultado.Exitoso = false;
+           }
 
             if (factura.Activo == false)
             {
