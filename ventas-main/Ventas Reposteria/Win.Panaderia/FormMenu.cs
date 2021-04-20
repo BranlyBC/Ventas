@@ -37,6 +37,8 @@ namespace Win.Panaderia
         {
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
+
+            toolStripStatusLabel1.Text = "Usuario: " + Utils.NombreUsuario;
         }
 
         private void productosToolStripMenuItem_Click_1(object sender, EventArgs e)

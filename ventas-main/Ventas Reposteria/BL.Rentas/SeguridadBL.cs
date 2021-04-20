@@ -16,7 +16,7 @@ namespace BL.Rentas
             _contexto = new Contexto();
         }
 
-        public bool Autorizar(string usuario, string contrasena)
+        public Usuario Autorizar(string usuario, string contrasena)
         {
             var usuarios = _contexto.Usuarios.ToList();
 
@@ -25,11 +25,11 @@ namespace BL.Rentas
 
                 if (usuario == usuarioDB.Nombre && contrasena == usuarioDB.Contrasena)
                 {
-                    return true;
+                    return usuarioDB;
                 }
             }
 
-            return false;
+            return null;
         }
     }
 

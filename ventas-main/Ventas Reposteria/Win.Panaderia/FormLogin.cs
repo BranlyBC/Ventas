@@ -57,10 +57,12 @@ namespace Win.Panaderia
             button1.Text = " Verificando ... ";
             Application.DoEvents();
 
-            var resultado = _seguridad.Autorizar(usuario, contrasena);
+            var usuaioDB = _seguridad.Autorizar(usuario, contrasena);
 
-            if (resultado == true)
+            if (usuaioDB != null)
             {
+                Utils.NombreUsuario = usuaioDB.Nombre;
+
                 this.Close();
             }
             else
@@ -70,6 +72,28 @@ namespace Win.Panaderia
 
             button1.Enabled = true;
             button1.Text = " Aceptar ";
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (textBox1.Text != "")
+                {
+                    textBox2.Focus();
+                }
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (textBox2.Text != "")
+                {
+                    button1_Click(null, null);
+                }
+            }
         }
     }
 }
